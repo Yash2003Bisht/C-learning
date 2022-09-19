@@ -19,4 +19,6 @@ int main(){
     long int f = fact(5);
     printf("%ld\n", f);
 
+    return 0;
+
 }
