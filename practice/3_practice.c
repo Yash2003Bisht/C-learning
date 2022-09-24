@@ -24,19 +24,11 @@ int fib_r(int n){
 int fib_i(int n){
     int a = 1;
     int b = 2;
-    int c;
-    if (n==1){
-        return a;
-    } else if (n==2){
-        return b;
-    } else{
-        for (int i=1; i<n-1; i++){
-            c = a+b;
-            a = b;
-            b = c;
-        }
-        return c;   
+    for (int i=1; i<n-1; i++){
+        b = a+b;
+        a = b-a;
     }
+        return b;
 }
 
 
@@ -45,7 +37,9 @@ int main(){
     // fibonacci using recursion
     clock_t t_r;
     t_r = clock();
-    printf("The fibonacci of 45 using recursion is %d\n", fib_r(45));
+    int fib_number = 5;
+
+    printf("The fibonacci of 45 using recursion is %d\n", fib_r(fib_number));
     t_r = clock() - t_r;
     double time_r = ((double)t_r)/CLOCKS_PER_SEC;
     printf("Time taken to calculate the fibonacci series using recursion %f\n", time_r);
@@ -55,7 +49,7 @@ int main(){
     // fibonacci using iteration
     clock_t t_i;
     t_i = clock();
-    printf("The fibonacci of 45 using iteration is %d\n", fib_i(45));
+    printf("The fibonacci of 45 using iteration is %d\n", fib_i(fib_number));
     t_i = clock() - t_i;
     double time_i = ((double)t_i)/CLOCKS_PER_SEC;
     printf("Time taken to calculate the fibonacci series using iteration %f\n", time_i);
