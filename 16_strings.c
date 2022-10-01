@@ -59,6 +59,7 @@
         where s is defined as char s[MAX_LEN] where MAX_LEN is the maximum size of s.
         Here, [] is the scanset character. ^\n stands for taking input until a newline isn't encountered.
         Then, with this %*c, it reads the newline character and here, the used * indicates that this newline character is discarded.
+        You can find more about it over -> https://www.hackerrank.com/challenges/playing-with-characters/problem
     */
     char input_str1[100];
     printf("Enter a string - using scanf(max size of string is 100 characters): ");
