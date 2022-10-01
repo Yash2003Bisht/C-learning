@@ -24,7 +24,7 @@
         * Strings in C is created by creating an array of characters
         * We need an extra character ('\0' or null character) to tell the compiler that the string ends here.
         
-        -------------- SYNTAX OF CREATING AN ARRAY --------------
+        -------------- SYNTAX OF CREATING AN STRING ARRAY --------------
         char name[] = "john cena";  -> '\0'(null character) is not required if we user double coats
         char name[] = {'j','o','h','n',' ','c','e','n','a','\0'};
 
