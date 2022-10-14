@@ -3,13 +3,9 @@
 
 int global_sum;
 
-// TODO: add extern keyword examples
-
 // ---------- external variable
-// extern int num;
+extern int num;
 
-// ---------- external function
-// extern int func();
 
 int total(int a, int b){
     // int sum = a + b;
@@ -73,10 +69,12 @@ int main(){
         - A global variable can be changed by any function in the program.
         - int var written outside any function will tell compiler that var is a global variable.
         - It is recommended to minimize the use of unnecessary global variables in a program.
+        - There is a detail article of extern -> https://www.geeksforgeeks.org/understanding-extern-keyword-in-c/
 
         ------------------- EXTERNAL VARIABLES: EXTERN KEYWORD -------------------
         - Extern is used to inform our C compiler that a given variable is declare somewhere else.
         - Using extern will not allocate space for the variable.
+        - Extern variable says to compiler  ”go outside my scope and you will find the definition of the variable that I declared.”
         - for ex.
             main1.c                         |       main2.c
             int main(){                     |       #include "main1.c";
@@ -114,7 +112,6 @@ int main(){
     printf("Global variable value after change: %d\n", global_sum);
 
     printf("External file variable value: %d\n", num);
-    printf("External file function return value: %d\n", func(5));
 
     for (int i=0; i<5; i++){
         printf("Static variable value at %d interation is: %d\n", i+1, increment_n());
