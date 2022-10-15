@@ -44,7 +44,7 @@ int main(){
         scanf("%d", &length);
 
         // allocate memory dynamically
-        id = (char *) malloc(length * sizeof(char));
+        id = (char *) malloc((length + 1) * sizeof(char));
         
         printf("Enter Employee %d ID: ", i+1);
         scanf("%s", id);
