@@ -69,7 +69,6 @@ int main(){
 
         
         // ----------------- print the result -----------------
-
         printf("\nMatrix C (result)\n");
         for (int i=0; i<ra; i++){
             for (int j=0; j<ca; j++){
@@ -79,7 +78,7 @@ int main(){
         }
         
     } else{
-        printf("Invalid");
+        printf("Invalid\n");
     }
 
 
