@@ -13,7 +13,7 @@ int main(){
             ---------- PreProcessing
             - Removal of comments
             - Expension of macros
-            - Expension of inclode files
+            - Expension of include files
 
             ---------- Compilation
             - Assembly level instruction are generated
