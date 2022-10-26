@@ -31,6 +31,8 @@ int main(){
 
     /*
         ---------------------- PROGRAM TO CHECK IF A NUMBER IS PALINDROME OR NOT ----------------------
+        - A palindrome is a word, number, phrase, or other sequence of symbols that reads
+          the same backwards as forwards, such as the words madam or racecar
     */
 
     int n;
