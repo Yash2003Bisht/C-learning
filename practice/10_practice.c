@@ -50,13 +50,13 @@ int main(){
 
         // ----------------- for matrix b -----------------
         b = (int **) malloc(rb * sizeof(int));
-        allocate_column_memory(b, ra, ca);
+        allocate_column_memory(b, rb, cb);
         printf("\nEnter Values for Matrix B\n");
         get_matrix_input(b, rb, cb);
 
         // ----------------- for matrix c -> result matrix -----------------
         c = (int **) calloc(rb, sizeof(int));
-        allocate_column_memory(c, ra, ca);
+        allocate_column_memory(c, ra, cb);
 
         // ----------------- matrix calculation start -----------------
         for (int i=0; i<ra; i++){
@@ -71,7 +71,7 @@ int main(){
         // ----------------- print the result -----------------
         printf("\nMatrix C (result)\n");
         for (int i=0; i<ra; i++){
-            for (int j=0; j<ca; j++){
+            for (int j=0; j<cb; j++){
                 printf("%d ", c[i][j]);
             }
             printf("\n");
