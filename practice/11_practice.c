@@ -11,7 +11,7 @@ int get_num_length(int num){
     return length;
 }
 
-int ispalindrome(int num){
+int ispalindrome_string(int num){
     int size = get_num_length(num);  // get the length of num
     char str_num[size+1];
 
@@ -27,6 +27,21 @@ int ispalindrome(int num){
     return 1;
 }
 
+int ispalindrome_integer(int num){
+    int temp = num;
+    int reverse_num = 0;
+
+    while(temp != 0){
+        reverse_num = reverse_num*10 + temp%10;
+        temp /= 10;
+    }
+
+    if (num == reverse_num)
+        return 1;
+        
+    return 0;
+}
+
 int main(){
 
     /*
@@ -40,9 +55,18 @@ int main(){
     printf("Enter a number: ");
     scanf("%d", &n);
 
-    if (ispalindrome(n))
-        printf("%d is a palindrome\n", n);
+    // using string
+    if (ispalindrome_string(n))
+        printf("%d is a palindrome (using string)\n", n);
     else
-        printf("%d is not a palindrome\n", n);
+        printf("%d is not a palindrome (using string)\n", n);
+
+    // using integer
+    if (ispalindrome_integer(n))
+        printf("%d is a palindrome (using integer)\n", n);
+    else
+        printf("%d is not a palindrome (using integer)\n", n);
+
+
     return 0;
 }
