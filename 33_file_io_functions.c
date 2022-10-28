@@ -62,11 +62,13 @@ int main(){
     char write_string[] = "previous data will be erased";
     file = fopen("33_file_io.txt", "w");
     fprintf(file, "%s", write_string);
-
+    fclose(file);
+    
     // -------- append a file --------
     char append_string[] = "previous data will not be erased\n";
     file = fopen("33_file_io.txt", "a");
     fprintf(file, "%s", append_string);
+    fclose(file);
 
     return 0;
 }
