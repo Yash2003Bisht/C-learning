@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(int argc, char const * argv[]) {
     /*
@@ -13,8 +14,15 @@ int main(int argc, char const * argv[]) {
 
     // ----------------------- MAIN CODE -----------------------
     int a, b;
-    sscanf(argv[2], "%d", &a);
-    sscanf(argv[3], "%d", &b);
+    
+    // sscanf(argv[2], "%d", &a);
+    // sscanf(argv[3], "%d", &b);
+
+    // -------- OR
+
+    a = atoi(argv[2]);
+    b = atoi(argv[3]);
+
 
     
     // -------- ADD
