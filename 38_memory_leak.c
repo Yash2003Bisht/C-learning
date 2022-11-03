@@ -38,6 +38,9 @@ void play(int bet_amount){
     }
     printf("Total cash: %d\n", cash);
 
+    // use free function to avoid memory leak
+    // free(c);
+
 }
 
 int main(){
@@ -68,7 +71,7 @@ int main(){
     */
 
     // --------------------- CODE EXAMPLE ---------------------
-    int bet_amount;
+    int bet_amount, count=0;
     printf("\nYou have %d cash\n", cash);
     
     while(cash > 0){
@@ -79,6 +82,10 @@ int main(){
             break;
         else
             play(bet_amount);
+
+        printf("Total bet made %d\n", count);
+
+        count++;
     }
 
 
