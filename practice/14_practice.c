@@ -2,15 +2,15 @@
 #include <math.h>
 #define PI 3.14
 
-int euclideanDistance(int x1, int y1, int x2, int y2){
+float euclideanDistance(int x1, int y1, int x2, int y2){
     /*
-        euclidean distance = sqrt((x1 - y2)**2 + (x2 - y2)**2)
+        euclidean distance = sqrt((x2 - x1)**2 + (y2 - y1)**2)
     */
-    return sqrt((x1 - y2)*(x1 - y2) + (x2 - y2)*(x2 - y2));
+    return sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1));
 }
 
-float areaOfCircle(int x1, int y1, int x2, int y2, int (fptr) (int, int, int, int)){
-    int euclidean_distance = fptr(x1, y1, x2, y2);
+float areaOfCircle(int x1, int y1, int x2, int y2, float (fptr) (int, int, int, int)){
+    float euclidean_distance = fptr(x1, y1, x2, y2);
     return (float) PI*(euclidean_distance*euclidean_distance);
 }
 
@@ -30,10 +30,10 @@ int main(){
     printf("Enter the value of x1, y1, x2, y2: ");
     scanf("%d%d%d%d", &x1, &y1, &x2, &y2);
 
-    int (*function_pointer) (int, int, int, int) = euclideanDistance;
+    float (*function_pointer) (int, int, int, int) = euclideanDistance;
     float radius = areaOfCircle(x1, y1, x2, y2, function_pointer);
 
-    printf("The radius of circle b/w two points is %f\n", radius);
+    printf("The radius of circle b/w two points is %.2f\n", radius);
 
 
     return 0;
