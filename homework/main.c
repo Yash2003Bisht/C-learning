@@ -275,17 +275,18 @@ void print_alphabets(char *alphabets_pointer)
 
 void x_occurrence()
 {
-    int x = 5, count=0;
+    int x = 5, count = 0;
     int arr[] = {1, 2, 4, 5, 1, 5, 6, 9, 9, 32, 2, 3, 5, 5, 6, 75};
 
-    for (int i=0; i<16; i++){
-        if (arr[i] == x){
+    for (int i = 0; i < 16; i++)
+    {
+        if (arr[i] == x)
+        {
             count++;
         }
     }
 
     printf("%d occur %d times\n", x, count);
-
 }
 
 void largest_number()
@@ -293,69 +294,77 @@ void largest_number()
     int arr[] = {1, 2, 4, 5, 1, 5, 6, 9, 9, 32, 2, 3, 5, 5, 6, 75};
     int largest = 0;
 
-    for (int i=0; i<16; i++){
-        if (arr[i] > largest){
+    for (int i = 0; i < 16; i++)
+    {
+        if (arr[i] > largest)
+        {
             largest = arr[i];
         }
     }
 
     printf("largest element in the array is %d\n", largest);
-
 }
 
 void insert_end()
 {
-    int x, arr[] = {1, 2, 4, 5, 1, 5, 6, 9, 9, 32, 2, 3, 5, 5, 6, 75}, * arr_pointer;
-    int length = sizeof(arr)/sizeof(arr[0]);
+    int x, arr[] = {1, 2, 4, 5, 1, 5, 6, 9, 9, 32, 2, 3, 5, 5, 6, 75}, *arr_pointer;
+    int length = sizeof(arr) / sizeof(arr[0]);
 
     printf("Enter a number you want to insert: ");
     scanf("%d", &x);
 
     // reallocate the size
-    arr_pointer = (int *) realloc(arr_pointer, (length+1) * sizeof(int));
+    arr_pointer = (int *)realloc(arr_pointer, (length + 1) * sizeof(int));
 
     // copy the array to new arr_pointer
-    for (int i=0; i<length; i++){
+    for (int i = 0; i < length; i++)
+    {
         arr_pointer[i] = arr[i];
     }
 
     arr_pointer[length] = x;
 
     // print the array
-    for (int i=0; i<length+1; i++){
+    for (int i = 0; i < length + 1; i++)
+    {
         printf("%d ", arr_pointer[i]);
     }
     printf("\n");
 
     free(arr_pointer);
-    
 }
 
-void upper_case_vowels(){
+void upper_case_vowels()
+{
     char vowels[] = {'a', 'e', 'i', 'o', 'u'};
 
-    for (int i=0; i<5; i++){
+    for (int i = 0; i < 5; i++)
+    {
         printf("vowel %c in uppercase is represented as %c\n", vowels[i], toupper(vowels[i]));
     }
-
 }
 
-void highest_frequency_string(){
+void highest_frequency_string()
+{
     char string[] = "This is a string";
-    int i=0 , j=0, count=0;
+    int i = 0, j = 0, count = 0;
     char longest_char[100];
 
-    for (; string[i] != '\0'; i++){
+    for (; string[i] != '\0'; i++)
+    {
         int temp_count = 0;
-        while (string[j] != ' ' && string[j] != '\0'){
+        while (string[j] != ' ' && string[j] != '\0')
+        {
             temp_count++;
             j++;
         }
 
-        if (temp_count > count){
+        if (temp_count > count)
+        {
             count = temp_count;
             temp_count = 0;
-            for (int k=i; k<j; k++){
+            for (int k = i; k < j; k++)
+            {
                 longest_char[temp_count] = string[k];
                 temp_count++;
             }
@@ -364,40 +373,47 @@ void highest_frequency_string(){
 
         i = j;
         j++;
-                
     }
 
     printf("The highest character on the string is %s\n", longest_char);
-
 }
 
-void remove_blank_spaces(){
+void remove_blank_spaces()
+{
     char string[] = "This is a string", new_string[100];
-    int j=0, i=0;
+    int j = 0, i = 0;
 
-    for (; string[i] != '\0'; i++){
-        if (string[i] != ' '){
+    for (; string[i] != '\0'; i++)
+    {
+        if (string[i] != ' ')
+        {
             new_string[j] = string[i];
             j++;
         }
     }
-    
+
     printf("before: %s\n", string);
     printf("after: %s\n", new_string);
-    
 }
 
-void lower_upper(){
+void lower_upper()
+{
     char string[] = "lower case string UPPER CASE STRING";
     char new_string[100];
-    int i=0, j=0;
+    int i = 0, j = 0;
 
-    for (; string[i] != '\0'; i++){
-        if (string[i] >= 'a' && string[i] <= 'z'){
+    for (; string[i] != '\0'; i++)
+    {
+        if (string[i] >= 'a' && string[i] <= 'z')
+        {
             new_string[j] = toupper(string[i]);
-        } else if (string[i] >= 'A' && string[i] <= 'Z'){
+        }
+        else if (string[i] >= 'A' && string[i] <= 'Z')
+        {
             new_string[j] = tolower(string[i]);
-        } else{
+        }
+        else
+        {
             new_string[j] = string[i];
         }
         j++;
@@ -405,7 +421,6 @@ void lower_upper(){
 
     printf("before: %s\n", string);
     printf("after: %s\n", new_string);
-
 }
 
 int main()
@@ -516,8 +531,6 @@ int main()
 
     // -------- soltuion 4 --------
     lower_upper();
-
-
 
     return 0;
 }
