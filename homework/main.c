@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 // #include <math.h>
 
 void rectangle_perimeter()
@@ -423,6 +424,26 @@ void lower_upper()
     printf("after: %s\n", new_string);
 }
 
+struct Teachers
+{
+    char name[100];
+    int age;
+    long number;
+    char address[500];
+};
+
+struct Student
+{
+    char name[100];
+    int age;
+    long number;
+    char address[500];
+    char subjects[6][100];
+};
+
+
+
+
 int main()
 {
     // ---------------- CHAPTER NO. 1 ----------------
@@ -530,7 +551,90 @@ int main()
     // remove_blank_spaces();
 
     // -------- soltuion 4 --------
-    lower_upper();
+    // lower_upper();
+
+    // ---------------- CHAPTER NO. 9 ----------------
+    // struct Teachers john, rock, romain;
+    // struct Student undertaker;
+    
+    // // ------------ Teachers ------------
+
+    // // name
+    // strcpy(john.name, "john cena");
+    // strcpy(rock.name, "dwayne johnson");
+    // strcpy(romain.name, "roman reigns");
+
+    // // age
+    // john.age = 45;
+    // rock.age = 53;
+    // romain.age = 40;
+
+    // // number
+    // john.number = 12345678;
+    // rock.number = 12345678;
+    // romain.number = 12345678;
+    
+    // // address
+    // strcpy(john.address, "NYC");
+    // strcpy(rock.address, "NYC");
+    // strcpy(romain.address, "NYC");
+    
+    //  // ------------ Student ------------
+
+    //  // name
+    //  strcpy(undertaker.name, "undertaker");
+
+    //  // age
+    //  undertaker.age = 13;
+
+    //  // number
+    //  undertaker.number = 12345678;
+
+    //  // address
+    //  strcpy(undertaker.address, "NYC");
+
+    //  // subjects
+    //  strcpy(undertaker.subjects[0], "Maths");
+    //  strcpy(undertaker.subjects[1], "Physics");
+    //  strcpy(undertaker.subjects[2], "C programming");
+    //  strcpy(undertaker.subjects[3], "English");
+    //  strcpy(undertaker.subjects[4], "Hindi");
+    //  strcpy(undertaker.subjects[5], "Wrestling");
+
+    //  // ------- teachers details -------
+    //  printf("Name: %s\n", john.name);
+    //  printf("Age: %d\n", john.age);
+    //  printf("Number: %ld\n", john.number);
+    //  printf("Address: %s\n", john.address);
+    //  printf("\n");
+     
+    //  printf("Name: %s\n", rock.name);
+    //  printf("Age: %d\n", rock.age);
+    //  printf("Number: %ld\n", rock.number);
+    //  printf("Address: %s\n", rock.address);
+    //  printf("\n");
+     
+    //  printf("Name: %s\n", romain.name);
+    //  printf("Age: %d\n", romain.age);
+    //  printf("Number: %ld\n", romain.number);
+    //  printf("Address: %s\n", romain.address);
+    //  printf("\n");
+
+    //  printf("----------------------\n\n");
+
+    //  // ------- student details -------
+    //  printf("Name: %s\n", undertaker.name);
+    //  printf("Age: %d\n", undertaker.age);
+    //  printf("Number: %ld\n", undertaker.number);
+    //  printf("Address: %s\n", undertaker.address);
+    //  printf("Subjects:\n");
+
+    //  for (int i=0; i<6; i++){
+    //     printf("%d) %s\n", i+1, undertaker.subjects[i]);
+    //  }
+    //  printf("\n");
+
+
 
     return 0;
 }
