@@ -1,0 +1,6 @@
+name  marks  cgpa  course
+john   45     1      C programing
+rock   55     2      C++ programing
+joseph 67     3      Python
+mark   45     4      Node js
+carl   68     5      Ruby

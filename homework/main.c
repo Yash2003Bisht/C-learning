@@ -441,7 +441,60 @@ struct Student
     char subjects[6][100];
 };
 
+void read_file(){
+    FILE* file = NULL;
+    char string[100];
 
+    file = fopen("text.txt", "r");
+    fscanf(file, "%[^\n]%*c", string);
+
+    printf("file content: %s\n", string);
+
+    fclose(file);
+
+}
+
+void replace_vowels(){
+    FILE* file = NULL;
+    char string1[100], string2[100];
+
+    file = fopen("text.txt", "r");
+    fscanf(file, "%[^\n]%*c", string1);
+
+    for (int i=0; string1[i] != '\0'; i++){
+        if (string1[i] == 'a' || string1[i] == 'e' ||
+            string1[i] == 'i' || string1[i] == 'o' ||
+            string1[i] == 'u'){
+                string2[i] = 'Q';
+        } else{
+            string2[i] = string1[i];
+        }
+    }
+
+    printf("before: %s\n", string1);
+    printf("after: %s\n", string2);
+
+    fclose(file);
+
+}
+
+void format_data(){
+    char content[] = "name  marks  cgpa  course\n"
+                     "john   45     1      C programing\n"
+                     "rock   55     2      C++ programing\n"
+                     "joseph 67     3      Python\n"
+                     "mark   45     4      Node js\n"
+                     "carl   68     5      Ruby\n";
+
+    FILE* file = NULL;
+    file = fopen("data.txt", "w");
+
+    fprintf(file, "%s", content);
+
+    fclose(file);
+    
+
+}
 
 
 int main()
@@ -634,6 +687,16 @@ int main()
     //  }
     //  printf("\n");
 
+    // ---------------- CHAPTER NO. 10 ----------------
+
+    // -------- soltuion 1 --------
+    // read_file();
+
+    // -------- soltuion 2 --------
+    // replace_vowels();
+    
+    // -------- soltuion 3 --------
+    // format_data();
 
 
     return 0;
