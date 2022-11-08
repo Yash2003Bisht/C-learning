@@ -496,45 +496,60 @@ void format_data(){
 
 }
 
+void allocate_memory(){
+    int* arr;
+    arr = (int *) malloc(500 * sizeof(arr));
+
+    for (int i=1; i<=500; i++){
+        arr[i] = i;
+    }
+
+    // print all first 500 natural numbers
+    for (int i=1; i<=500; i++){
+        printf("%d\n", arr[i]);
+    }
+
+    free(arr);
+}
 
 int main()
 {
     // ---------------- CHAPTER NO. 1 ----------------
 
-    // -------- soltuion 1 --------
+    // -------- solution 1 --------
     // rectangle_perimeter();
 
-    // -------- soltuion 2 --------
+    // -------- solution 2 --------
     // cube();
 
-    // -------- soltuion 3 --------
+    // -------- solution 3 --------
     // here is a comment for a & b.
 
     // ---------------- CHAPTER NO. 2 ----------------
 
-    // -------- soltuion 1 --------
+    // -------- solution 1 --------
     // avg();
 
-    // -------- soltuion 2 --------
+    // -------- solution 2 --------
     // is_digit();
 
-    // -------- soltuion 3 --------
+    // -------- solution 3 --------
     // min();
 
     // ---------------- CHAPTER NO. 3 ----------------
 
-    // -------- soltuion 1 --------
+    // -------- solution 1 --------
     // is_armstrong();
 
-    // -------- soltuion 2 --------
+    // -------- solution 2 --------
     // is_natural_number();
 
     // ---------------- CHAPTER NO. 4 ----------------
 
-    // -------- soltuion 1 --------
+    // -------- solution 1 --------
     // print_pattern();
 
-    // -------- soltuion 2 --------
+    // -------- solution 2 --------
     // int n;
 
     // printf("Enter a number: ");
@@ -542,26 +557,26 @@ int main()
 
     // is_prime(n);
 
-    // -------- soltuion 3 --------
+    // -------- solution 3 --------
     // print_prime_range();
 
     // ---------------- CHAPTER NO. 5 ----------------
 
-    // -------- soltuion 1 --------
+    // -------- solution 1 --------
     // digit_sum();
 
-    // -------- soltuion 2 --------
+    // -------- solution 2 --------
     // find_sqrt();
 
-    // -------- soltuion 3 --------
+    // -------- solution 3 --------
     // hot_cold();
 
-    // -------- soltuion 4 --------
+    // -------- solution 4 --------
     // own_pow();
 
     // ---------------- CHAPTER NO. 6 ----------------
 
-    // -------- soltuion 1 --------
+    // -------- solution 1 --------
     // int x,y;
 
     // printf("Enter first a number: ");
@@ -573,37 +588,37 @@ int main()
     // int* x_pointer = &x, * y_pointer = &y;
     // max_using_pointer(x_pointer, y_pointer);
 
-    // -------- soltuion 2 --------
+    // -------- solution 2 --------
     // arr_reverse();
 
-    // -------- soltuion 3 --------
+    // -------- solution 3 --------
     // char alphabets[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
     //                     'u', 'v', 'w', 'x', 'y', 'z', '\0'};
     // print_alphabets(alphabets);
 
     // ---------------- CHAPTER NO. 7 ----------------
 
-    // -------- soltuion 1 --------
+    // -------- solution 1 --------
     // x_occurrence();
 
-    // -------- soltuion 2 --------
+    // -------- solution 2 --------
     // largest_number();
 
-    // -------- soltuion 3 --------
+    // -------- solution 3 --------
     // insert_end();
 
     // ---------------- CHAPTER NO. 8 ----------------
 
-    // -------- soltuion 1 --------
+    // -------- solution 1 --------
     // upper_case_vowels();
 
-    // -------- soltuion 2 --------
+    // -------- solution 2 --------
     // highest_frequency_string();
 
-    // -------- soltuion 3 --------
+    // -------- solution 3 --------
     // remove_blank_spaces();
 
-    // -------- soltuion 4 --------
+    // -------- solution 4 --------
     // lower_upper();
 
     // ---------------- CHAPTER NO. 9 ----------------
@@ -689,15 +704,50 @@ int main()
 
     // ---------------- CHAPTER NO. 10 ----------------
 
-    // -------- soltuion 1 --------
+    // -------- solution 1 --------
     // read_file();
 
-    // -------- soltuion 2 --------
+    // -------- solution 2 --------
     // replace_vowels();
     
-    // -------- soltuion 3 --------
+    // -------- solution 3 --------
     // format_data();
 
+    // ---------------- CHAPTER NO. 11 ----------------
+
+    // -------- solution 1 --------
+    // Dangling pointers and wild pointers in computer programming are pointers
+    // that do not point to a valid object of the appropriate type.
+    // These are special cases of memory safety violations.
+
+    // -------- solution 2 --------
+    // allocate_memory();
+
+    // -------- solution 3 --------
+    // Memory leak occurs when programmers create a memory in heap and forget to delete it.
+    // Notice the use of free in above solution.
+
+    // -------- solution 4 --------
+    /*
+        ___________________________________________________________________________________________________
+        |S.No.	|                malloc()	                 |                calloc()                    |
+        |_______|____________________________________________|____________________________________________|
+        | 1.    |   malloc() function creates a single       | calloc() function assigns multiple blocks  |
+        |       |   block of memory of a specific size.      | of memory to a single variable.            |
+        |-------|--------------------------------------------|--------------------------------------------|
+        | 2.    |   The number of arguments in malloc()is 1. | The number of arguments in calloc() is 2.  |
+        |-------|--------------------------------------------|--------------------------------------------|
+        | 3.    |   malloc() is faster.                      | calloc() is slower.                        |
+        |-------|--------------------------------------------|--------------------------------------------|
+        | 4.    |   malloc() has high time efficiency.       | calloc() has low time efficiency.          |
+        |-------|--------------------------------------------|--------------------------------------------|
+        | 5.    |   The memory block allocated by malloc()   | The memory block allocated by calloc()     |
+        |       |   has a garbage value.                     | is initialized by zero.                    |
+        |-------|--------------------------------------------|--------------------------------------------|
+        | 6.    |   malloc() indicates memory allocation.    | calloc() indicates contiguous allocation.  |
+        |_______|____________________________________________|____________________________________________|
+        
+    */
 
     return 0;
 }
