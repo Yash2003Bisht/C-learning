@@ -34,7 +34,7 @@ int main(){
         - In C programming, we can call a function in two different ways, based on how we specify the arguments, and these two ways are:
             
             * Call by value
-                - When we cal a function by value, it means that we are passing the values of the arguments which are copied into
+                - When we call a function by value, it means that we are passing the values of the arguments which are copied into
                   the formal parameter of the function.
                 - Which means that the original values reamins unchanged and only the parameters inside the function changes.
 

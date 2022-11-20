@@ -33,7 +33,7 @@ int main(){ // <- programme execution start from here
     // 3) Machine
     // Now your assembly instruction converted into machine level 
     // instruction(baniary which is understand by cpu) store in .o file you can 
-    // not open .o file because it is in binary formate.
+    // not open .o file because it is in binary format.
     	
     // 4) linker
    	// This is a final phase, here .o file converted in an executable

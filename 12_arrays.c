@@ -24,7 +24,7 @@ int avg(int arr[], int n){
 
 int min(int arr[], int n){
     /*
-        function to find minimume element in an array
+        function to find minimum element in an array
     */
     int _min = arr[0];
     for (int i=1; i<n; i++){
@@ -38,7 +38,7 @@ int min(int arr[], int n){
 
 int max(int arr[], int n){
     /*
-        function to find maximume element in an array
+        function to find maximum element in an array
     */
     int _max = arr[0];
     for (int i=1; i<n; i++){
@@ -54,7 +54,7 @@ int main(){
         - A arrya is a collection of data items of the same type.
         - Items are stored at contiguous memory locations.
         - It can also store the collection of derived data types, such as pointer, structures, etc.
-        - Some texts refer to to one-dimensional arrays as vectors, two dimensional arrays as matrices,
+        - Some texts refer to one-dimensional arrays as vectors, two dimensional arrays as matrices,
           and use the general term array when the number of dimensional unspecfied or unimportant.
     */
 

@@ -53,7 +53,7 @@ int main(){
             * By declaring array as a parameter in function
             * By declaring a pointer in the function to hold the base address of the array 
         
-        NOTE: if we change the value of array, it gets relected in main function
+        NOTE: if we change the value of array, it gets reflected in main function
     */
 
     int arr[] = {1, 2, 5, 4};

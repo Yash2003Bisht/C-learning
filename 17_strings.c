@@ -14,7 +14,7 @@
     /*
         -------------- IS STRING A DATATYPE IN C? --------------
         * No
-        * We hvae char, float, double and other data types but no 'string' data type in c
+        * We have char, float, double and other data types but no 'string' data type in c
         * String is not a supported data type in C but it is very useful concept used to model
           real world enities like name, city, address etc.
         * We express strings using an array of characters terminated by a null character ('\0')
