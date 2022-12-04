@@ -39,11 +39,9 @@ int main(){
 
 
     // NULL POINTERS
-    int* pointer1;
-    int* pointer2 = NULL;
+    int* pointer1 = NULL;
 
     printf("The is the value of pointer1 %p\n", pointer1);
-    printf("The is the value of pointer2 %p\n", pointer2);
 
 
 
